@@ -11,7 +11,7 @@
 컨테이너 재시작 시에도 **코드 작업 내용과 설정 정보를 유지하기 위해**  
 로컬 디렉토리를 Docker 볼륨으로 바인딩합니다.
 
-> 🪟 이 경로는 Windows (WSL 또는 Docker Desktop) 환경 기준입니다.  
+> 이 경로는 저의 Windows (WSL 또는 Docker Desktop) 환경 기준입니다.  
 > 실제 경로는 사용자 환경에 따라 조정하세요.
 
 #### 📦 앱 데이터 볼륨 생성
@@ -23,6 +23,9 @@ docker volume create  \
   --opt type=none \
   devops-cicd-apps
 
+#### 🛠️ VSCode 설정 볼륨 생성
+
+```bash
 docker volume create  \
   --opt device="/mnt/d/GitHub_Action_강의/cloud-ide/ide/storage/devops-cicd-vscode" \
   --opt o=bind \
