@@ -22,7 +22,10 @@ docker volume create  \
   --opt o=bind \
   --opt type=none \
   devops-cicd-apps
+```
+#### 🛠️ VSCode 설정 볼륨 생성
 
+```bash
 docker volume create  \
   --opt device="/mnt/d/GitHub_Action_강의/cloud-ide/ide/storage/devops-cicd-vscode" \
   --opt o=bind \
