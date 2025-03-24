@@ -37,4 +37,4 @@ volumes:
 
 # 호스트 볼륨            컨테이너 내 경로
 # devops-cicd-apps	   /code/devops-cicd-apps	    여기에 코드나 프로젝트 저장
-# devops-cicd-vscode	/config	VSCode              서버 설정, 확장 등 저장됨
+# devops-cicd-vscode	 /config	VSCode              서버 설정, 확장 등 저장됨

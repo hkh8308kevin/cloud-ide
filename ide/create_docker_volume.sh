@@ -1,9 +1,10 @@
+# vscode 데이터 유지를 위한 도커 볼륨 생성 및 마운트
 docker volume create  \
---opt device="/Users/dangtongbyun/Library/CloudStorage/GoogleDrive-dbyun@redhat.com/내 드라이브/05.Lecture/cicd/devops-cicd/storage/devops-cicd-apps" \
+--opt device="/mnt/d/GitHub_Action_강의/cloud-ide/ide/storage/devops-cicd-apps" \
 --opt o=bind --opt type=none devops-cicd-apps
 
 docker volume create  \
---opt device="/Users/dangtongbyun/Library/CloudStorage/GoogleDrive-dbyun@redhat.com/내 드라이브/05.Lecture/cicd/devops-cicd/storage/devops-cicd-vscode" \
+--opt device="/mnt/d/GitHub_Action_강의/cloud-ide/ide/storage/devops-cicd-vscode" \
 --opt o=bind --opt type=none devops-cicd-vscode
 
 # 볼륨 생성 확인

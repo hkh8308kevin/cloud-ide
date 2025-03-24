@@ -72,4 +72,18 @@ RUN wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | tee /usr/s
     | tee /etc/apt/sources.list.d/hashicorp.list && \
     apt-get update && apt-get install -y terraform && apt-get clean
 
-# 11. Kub
+# 11. Kubectl 설치
+RUN curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.29/deb/Release.key | gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg && \
+    echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.29/deb/ /' \
+    | tee /etc/apt/sources.list.d/kubernetes.list
+
+RUN apt-get update && apt-get install -y kubectl
+
+# 12. Kubectx & Kubens 설치
+RUN git clone https://github.com/ahmetb/kubectx /opt/kubectx && \
+    ln -s /opt/kubectx/kubectx /usr/local/bin/kubectx && \
+    ln -s /opt/kubectx/kubens /usr/local/bin/kubens
+
+# 13. k9s 설치
+RUN curl -fsSL https://github.com/derailed/k9s/releases/latest/download/k9s_Linux_amd64.tar.gz \
+    | tar xz && mv k9s /usr/local/bin/ && chmod +x /usr/local/bin/k9s
