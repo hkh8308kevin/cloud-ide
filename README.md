@@ -1,6 +1,6 @@
-# Cloud CI/CD IDE 환경 구축 가이드
+# Cloud IDE 환경 구축 가이드
 
-## 🚀 실행 가이드: Cloud CI/CD IDE 환경 구축
+## 🚀 실행 가이드: Cloud IDE 환경 구축
 
 아래 단계를 순서대로 따라 하시면 로컬에서 컨테이너 환경의 IDE가 만들어집니다.
 
@@ -23,9 +23,9 @@ docker volume create  \
   --opt type=none \
   devops-cicd-apps
 
-#### 🛠️ VSCode 설정 볼륨 생성
-
-```bash
+🛠️ VSCode 설정 볼륨 생성
+bash
+복사
 docker volume create  \
   --opt device="/mnt/d/GitHub_Action_강의/cloud-ide/ide/storage/devops-cicd-vscode" \
   --opt o=bind \
