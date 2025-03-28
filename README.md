@@ -57,7 +57,7 @@ Docker 이미지를 빌드한 뒤 컨테이너로 실행합니다.
 먼저 프로젝트 코드를 로컬에 클론합니다:
 
 ```bash
-git clone https://github.com/사용자명/레포명.git
+git clone [https://github.com/hkh8308kevin/cicd-test.git]
 cd /mnt/d/GitHub_Action_강의/cloud-ide/ide
 ```
 
@@ -79,9 +79,9 @@ docker build -t cloud-ide:latest .
  ```bash
  docker run -d \
   --name devops-cicd-ide \
-  -p 8443:8443 \
-  -v devops-cicd-apps:/home/coder/project \
-  -v devops-cicd-vscode:/home/coder/.local/share/code-server \
+  -p 8444:8443 \
+  -v devops-cicd-apps:/mnt/d/GitHub_Action_강의/cloud-ide/ide/storage/devops-cicd-apps \
+  -v devops-cicd-vscode:/mnt/d/GitHub_Action_강의/cloud-ide/ide/storage/devops-cicd-vscode \
   cloud-ide:latest
 ```
 2. docker compose
@@ -89,4 +89,4 @@ docker build -t cloud-ide:latest .
 docker compoose up -d
 ```
 ---
-브라우저에서 https://localhost:8443 으로 접속할 수 있습니다.
+브라우저에서 http://localhost:8444 으로 접속할 수 있습니다.
