@@ -8,7 +8,7 @@
 
 ## 📋 사전 준비 사항
 
-Cloud IDE를 실행하기 전에 아래 도구들이 설치되어 있어야 합니다:
+Cloud IDE를 실행하기 전에 아래 도구들이 설치되어 있어야 합니다.
 
 - [Visual Studio Code](https://code.visualstudio.com/) 
 - [GitHub Desktop](https://desktop.github.com/) 또는 Git CLI
