@@ -58,12 +58,13 @@ Docker 이미지를 빌드한 뒤 컨테이너로 실행합니다.
 
 ```bash
 git clone https://github.com/사용자명/레포명.git
-cd 레포명
+cd /mnt/d/GitHub_Action_강의/cloud-ide/ide
 ```
 
 ### 🔧 Docker 이미지 빌드
 
 Dockerfile이 포함된 경로에서 다음 명령어를 실행합니다.
+(도커파일을 수정한 다음 이미지를 빌드 한 후 자신의 이미지 공간에 푸시 후 이미지를 사용하실 수 있습니다.)
 
 ```bash
 docker build -t cloud-ide:latest .
