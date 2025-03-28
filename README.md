@@ -6,6 +6,17 @@
 
 ---
 
+## 📋 사전 준비 사항
+
+Cloud IDE를 실행하기 전에 아래 도구들이 설치되어 있어야 합니다:
+
+- [Visual Studio Code](https://code.visualstudio.com/) 
+- [GitHub Desktop](https://desktop.github.com/) 또는 Git CLI
+- [Docker Desktop](https://www.docker.com/products/docker-desktop) (컨테이너 런타임)
+- Docker로 실행할 **IDE 컨테이너 이미지** 또는 Docker Compose 설정 파일
+  
+---
+
 ### 1️⃣ 💾 VSCode 데이터 유지를 위한 Docker 볼륨 생성
 
 컨테이너 재시작 시에도 **코드 작업 내용과 설정 정보를 유지하기 위해**  
@@ -31,3 +42,50 @@ docker volume create  \
   --opt o=bind \
   --opt type=none \
   devops-cicd-vscode
+```
+---
+
+### 2️⃣ 🐳 Docker 이미지 빌드 및 IDE 실행
+
+IDE 환경을 실행하기 위해 먼저 GitHub 저장소를 클론하고,  
+Docker 이미지를 빌드한 뒤 컨테이너로 실행합니다.
+
+---
+
+### 📥 GitHub 저장소 클론
+
+먼저 프로젝트 코드를 로컬에 클론합니다:
+
+```bash
+git clone https://github.com/사용자명/레포명.git
+cd 레포명
+```
+
+### 🔧 Docker 이미지 빌드
+
+Dockerfile이 포함된 경로에서 다음 명령어를 실행합니다.
+
+```bash
+docker build -t cloud-ide:latest .
+```
+
+### 🚀 IDE 컨테이너 실행
+
+두가지 방법으로 실행 가능합니다.
+ 
+ 1.docker run
+ ```bash
+ docker run -d \
+  --name devops-cicd-ide \
+  -p 8443:8443 \
+  -v devops-cicd-apps:/home/coder/project \
+  -v devops-cicd-vscode:/home/coder/.local/share/code-server \
+  cloud-ide:latest
+```
+2. docker compose
+```bash
+docker compoose up -d
+```
+---
+브라우저에서 https://localhost:8443 으로 접속할 수 있습니다.
+
