@@ -64,6 +64,7 @@ cd /mnt/d/GitHub_Action_강의/cloud-ide/ide
 ### 🔧 Docker 이미지 빌드
 
 Dockerfile이 포함된 경로에서 다음 명령어를 실행합니다.
+
 (도커파일을 수정한 다음 이미지를 빌드 한 후 자신의 이미지 공간에 푸시 후 이미지를 사용하실 수 있습니다.)
 
 ```bash
@@ -89,4 +90,3 @@ docker compoose up -d
 ```
 ---
 브라우저에서 https://localhost:8443 으로 접속할 수 있습니다.
-
