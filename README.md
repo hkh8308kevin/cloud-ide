@@ -57,7 +57,7 @@ Docker 이미지를 빌드한 뒤 컨테이너로 실행합니다.
 먼저 프로젝트 코드를 로컬에 클론합니다:
 
 ```bash
-git clone [https://github.com/hkh8308kevin/cicd-test.git]
+git clone https://github.com/hkh8308kevin/cicd-test.git
 cd /mnt/d/GitHub_Action_강의/cloud-ide/ide
 ```
 
