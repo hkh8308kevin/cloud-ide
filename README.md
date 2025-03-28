@@ -13,7 +13,7 @@ Cloud IDE를 실행하기 전에 아래 도구들이 설치되어 있어야 합�
 - [Visual Studio Code](https://code.visualstudio.com/) 
 - [GitHub Desktop](https://desktop.github.com/) 또는 Git CLI
 - [Docker Desktop](https://www.docker.com/products/docker-desktop) (컨테이너 런타임)
-- Docker로 실행할 **IDE 컨테이너 이미지** 또는 Docker Compose 설정 파일
+- Docker로 실행할 **IDE 컨테이너 이미지** 또는 **Docker Compose 설정 파일**
   
 ---
 
