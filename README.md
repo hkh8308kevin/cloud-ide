@@ -47,7 +47,7 @@ docker volume create  \
 
 ### 2️⃣ 🐳 Docker 이미지 빌드 및 IDE 실행
 
-IDE 환경을 실행하기 위해 먼저 GitHub 저장소를 클론하고,  
+IDE 환경의 컨테이너를 만들기 위해 먼저 GitHub 저장소를 클론하고,  
 Docker 이미지를 빌드한 뒤 컨테이너로 실행합니다.
 
 ---
